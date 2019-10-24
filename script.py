@@ -3,7 +3,7 @@ from file_manipulation import Reader
 from mobileLebra import mobileLebara
 from prekoUrl import getOister
 from telmorePrekoUrl import getTelmore
-from searchTelmore import telmoreSearch
+
 
 def main():
     
