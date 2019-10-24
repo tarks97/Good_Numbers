@@ -15,8 +15,9 @@ def func():
                 try:
                     intNumber = int(numberText)
                     fajl.write("%d\n",intNumber)
-                except Exception as e:
-                    print(e)
+                except:
+                    pass
+                    # print(e)
             fajl.close()
                 
             

@@ -56,7 +56,6 @@ def telmoreSearch(url):
         print(e)
     driver.close()
 
-URLS = Reader("urls.txt")
-for url in URLS:
-    if "telmore" in str(url):
-        telmoreSearch(url)
+
+telmoreSearch("https://www.telmore.dk/flows/tilmelding/PAYG/nyt-nummer/")
+
