@@ -2,7 +2,7 @@ from driver_load import driver_load
 from time import sleep
 from file_manipulation import Reader
 from selenium.webdriver.common.keys import Keys
-
+from myemail import send_numbers
 
 
 def oisteri(url):
@@ -50,7 +50,7 @@ def oisteri(url):
           # div Sa Label Tagovima U Kojima Se Nalaze Brojevi niz u pitanju
         
         
-        with open("brojevi.txt", "+a",) as fajl:
+        with open("oister.txt", "+a",) as fajl:
            brojevi = Reader("Dobribrojevi.txt")
            for broj in brojevi:
 
@@ -67,6 +67,7 @@ def oisteri(url):
 
                 if not driver.find_element_by_xpath("""//*[@id="card__-1"]/div/div[3]/div/div/div/div/form/div[4]/div/p"""):
                     fajl.write("%s \n ", broj)
+                    send_numbers(str(broj))
                 
         fajl.close()
     except Exception as e: 

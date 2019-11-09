@@ -1,6 +1,5 @@
 from driver_load import driver_load
 from time import sleep
-from algoritmi import *
 
 
 

@@ -2,7 +2,7 @@ from driver_load import driver_load
 from time import sleep
 from file_manipulation import Reader
 from selenium.webdriver.common.keys import Keys
-
+from myemail import send_numbers
 
 
 def telmoreSearch(url):
@@ -33,7 +33,7 @@ def telmoreSearch(url):
           # div Sa Label Tagovima U Kojima Se Nalaze Brojevi niz u pitanju
         
         
-        with open("brojevi.txt", "+a",) as fajl:
+        with open("telmore.txt", "+a",) as fajl:
            brojevi = Reader("Dobribrojevi.txt")
            for broj in brojevi:
 
@@ -50,6 +50,7 @@ def telmoreSearch(url):
 
                 if not driver.find_element_by_xpath("""//*[@id="no-numbers"]"""):
                     fajl.write("Telmore %s \n ", broj)
+                    send_numbers(str(broj))
                 
         fajl.close()
     except Exception as e: 
