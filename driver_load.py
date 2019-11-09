@@ -22,5 +22,5 @@ def driver_load():
     #     driver = webdriver.Chrome(chrome_options=chrome_options)
     chrome_options.add_argument("window-size=1920,1080")
     chrome_options.headless = True
-    driver = webdriver.Chrome(options=chrome_options, executable_path=r'/Users/richard/Desktop/Good_Numbers//venv/bin/chromedriver')
+    driver = webdriver.Chrome(options=chrome_options, executable_path=r'venv/bin/chromedriver')
     return driver
